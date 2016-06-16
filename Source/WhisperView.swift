@@ -7,7 +7,7 @@ public protocol NotificationControllerDelegate: class {
 public class WhisperView: UIView {
 
   struct Dimensions {
-    static let height: CGFloat = 24
+    static let height: CGFloat = 38
     static let offsetHeight: CGFloat = height * 2
     static let imageSize: CGFloat = 14
     static let loaderTitleOffset: CGFloat = 5
@@ -44,6 +44,7 @@ public class WhisperView: UIView {
 
     titleLabel.text = message.title
     titleLabel.textColor = message.textColor
+    titleLabel.font = message.font
     backgroundColor = message.backgroundColor
 
     if let images = whisperImages where images.count > 1 {
